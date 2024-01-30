@@ -1,0 +1,45 @@
+.text{
+    text-align: center;
+    color: rgb(242, 237, 230);
+    background-color: rgb(170, 125, 49);;
+    font-size: xx-large;
+}
+.course{
+    background-color:rgb(127, 112, 86);
+    padding: 50px 100px;
+}
+
+.box{
+    background-color: rgb(170, 125, 49);
+    padding: 10px 20px;
+    overflow: hidden;
+ 
+}
+.box img{
+    height:200px;
+    width:275px;
+    overflow: hidden;
+}
+.box :hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+ul{
+    columns: 4;
+    list-style-type: none;
+  } 
+/* #ul img{
+    height: 100%;
+    width:fit-content;
+} */
+btn-primary{
+    color: aqua;
+
+    background-color: aqua;
+  }
+  @media screen and (max-width :600px) {
+    .course{
+        background-color:#c2c7ce ;
+        padding:50px 100px;
+    }
+  }

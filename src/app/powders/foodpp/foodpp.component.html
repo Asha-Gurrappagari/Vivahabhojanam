@@ -1,0 +1,34 @@
+<app-not-found [visible]="!powder" notfoundmessage="Product Not Found!"
+resetLinkText="Back To Homepage"></app-not-found>
+
+<div *ngIf="powder" class="container">
+    <img [src]="powder.imageUrl" [alt]="powder.name">
+<div class="details">
+    <div class="header">
+        <span class="name">
+            {{powder.name}}
+        </span>
+        <span class="favorite {{powder.favorite?'':'not'}}">♥</span>
+    </div>
+    <!-- <div class="star">
+        <star-rating [value]="food.star"
+        [totalstars]="5"
+        checkedcolor="red"
+        uncheckedcolor="black"
+        size="24px"
+        readonly="true">
+    </star-rating>
+    </div> -->
+    <div class="description">
+        <span>
+            {{powder.description}}
+        </span>
+    </div>
+    <div class="price">
+            <span>
+                {{powder.price|currency:"INR":"symbol"}}
+            </span>
+    </div>
+    <button (click)="addToCartP()">Add to Cart</button>
+</div>
+</div>

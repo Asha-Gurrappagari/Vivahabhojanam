@@ -1,0 +1,33 @@
+div{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(127, 112, 86);
+    padding-top: 3rem;
+}
+input{
+    border: none;
+    height: 0.5rem;
+    border-radius: 5rem 0 0 5rem;
+    width: 15rem;
+    background-color: #f1f1f1;
+    padding: 0.7rem;
+    font-size: 1rem;
+    font-weight: 10;
+    outline: none;
+}
+div button{
+    height: 1.9rem;
+    width:5rem;
+    color: rgb(170, 125, 49);
+    font-size: 1rem;
+    border-radius: 0 10rem 10rem 0;
+    border: none;
+    background-color: rgb(170, 125, 49);
+    color: rgb(15, 13, 13);
+    opacity: 0.8;
+    outline: none;
+}
+div button:hover{
+    opacity: 1;
+    cursor: pointer;
+}

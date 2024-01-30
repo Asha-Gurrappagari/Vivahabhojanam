@@ -1,0 +1,133 @@
+<app-search></app-search>
+<app-tag></app-tag>
+<app-not-found [visible]="!foods || foods.length <=0" resetLinkText="Reset Search"></app-not-found>
+<section class = "Pickles">
+ <ul>
+    <li >
+        <div class="row">
+        <div class="col-lg-3" *ngFor = "let food of foods">
+            <div class="box" >
+                <div routerLink="/food/{{food.id}}">
+                <img src= "{{food.imageUrl}}" alt="food.name" width="80%">
+                    <div class="content">
+                        <div class="name">
+                            {{food.name}}
+                        </div>
+                        <span class="favorite {{food.favorite?'':'not'}}">♥</span>
+                        <div class="description">
+                            {{food.description}}  
+                        </div>
+                        <div class="price">
+                            {{food.price|currency:"INR":"symbol"}}
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>  
+        </div>
+    </li>
+</ul> 
+<!-- <ul>
+    <li >
+        <div class="row">
+        <div class="col-lg-3" *ngIf="VP()">
+            <div class="box" >
+                    <img src= "{{imageUrl}}" alt="name" width="80%">
+                    <div class="content">
+                        <div class="name">
+                            {{name}}
+                        </div>
+                        <span class="favorite {{favorite?'':'not'}}">♥</span>
+                        <div class="description">
+                            {{description}}  
+                        </div>
+                        <div class="price">
+                            {{price|currency:"INR":"symbol"}}
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </li>
+</ul>  -->
+<!-- <ul>
+    <li >
+        <div class="row">
+        <div class="col-lg-3" *ngFor = "let x of veg">
+            <div class="box" >
+                    <img src= "{{x.imageUrl}}" alt="x.name" width="80%">
+                    <div class="content">
+                        <div class="name">
+                            {{x.name}}
+                        </div>
+                        <span class="favorite {{x.favorite?'':'not'}}">♥</span>
+                        <div class="description">
+                            {{x.description}}  
+                        </div>
+                        <div class="price">
+                            {{x.price|currency:"INR":"symbol"}}
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </li>
+</ul>  -->
+ 
+<!-- <ul>
+    <li *ngIf="getVeg()">
+        <div class="row">
+            <div class="col-lg-3" *ngFor = "let x of veg">
+                <div class="box" >
+                    <img src= "{{ x.image }}" width = "80%">
+                    <h4 class = "mt-2" >{{x.name}}</h4>
+                    <p class="mt-2">{{x.description}}</p>           
+                </div>
+            </div>
+        </div>
+    </li>
+</ul> 
+-->
+<router-outlet></router-outlet>
+
+</section> 
+ <!-- <div>
+                <div *ngIf="cs.id===1">
+                    <button (click)="getPickles()">Explore Pickles</button>
+                    
+                </div>
+                <div *ngIf="cs.id===2">
+                    <button (click)="getPowders()">Explore Powders</button>
+                
+                </div>
+                <div *ngIf="cs.id===3">
+                    <button (click)="getDals()">Explore Dals</button>
+                   
+                </div>
+                <div *ngIf="cs.id===4">
+                    <button (click)="getSpices()">Explore Spices</button>
+                </div> -->
+                
+            <!-- </div> -->
+
+<!-- <ul>
+    <li *ngFor="let food of foods">
+        <a routerLink="/foods/{{food.id}}"></a>
+            <img src="{{food.imageUrl}}" [alt]="food.name">
+            <div class="content">
+                <div class="name">
+                    {{food.name}}
+                </div>
+                <span class="favorite {{food.favorite?'':'not'}}">♥</span>
+                <div class="stars">
+                  
+                <div class="description">
+                    {{food.description}}  
+                </div>
+                <div class="price">
+                    {{food.price|currency:"INR":"symbol"}}
+                </div>
+            </div>
+        </div>
+    </li>
+</ul> -->

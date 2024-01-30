@@ -1,0 +1,34 @@
+<app-not-found [visible]="!dals" notfoundmessage="Product Not Found!"
+resetLinkText="Back To Homepage"></app-not-found>
+
+<div *ngIf="dals" class="container">
+    <img [src]="dals.imageUrl" [alt]="dals.name">
+<div class="details">
+    <div class="header">
+        <span class="name">
+            {{dals.name}}
+        </span>
+        <span class="favorite {{dals.favorite?'':'not'}}">♥</span>
+    </div>
+    <!-- <div class="star">
+        <star-rating [value]="food.star"
+        [totalstars]="5"
+        checkedcolor="red"
+        uncheckedcolor="black"
+        size="24px"
+        readonly="true">
+    </star-rating>
+    </div> -->
+    <div class="description">
+        <span>
+            {{dals.description}}
+        </span>
+    </div>
+    <div class="price">
+            <span>
+                {{dals.price|currency:"INR":"symbol"}}
+            </span>
+    </div>
+    <button (click)="addToCartD()">Add to Cart</button>
+</div>
+</div>

@@ -1,0 +1,82 @@
+.text{
+    text-align: center;
+    color: rgb(242, 237, 230);
+    background-color: rgb(170, 125, 49);
+    font-size: xx-large;
+}
+.Dals{
+    background-color:rgb(127, 112, 86);
+    padding: 50px 100px;
+}
+.box{
+    background-color: rgb(170, 125, 49);
+    padding: 10px 20px;
+    border-radius: 1rem;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.box img{
+    height:200px;
+    width:275px;
+}
+.box :hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+ul{
+    columns: 3;
+    list-style-type: none;
+    padding-top: 10px;
+
+  } 
+  button{
+    padding-left: 10px;
+    text-align: center;
+    position: 10px;
+  }
+  .content{
+    padding: .5rem 1rem;
+    position: relative;
+  }
+.favorite{
+   font-size: 1.2rem;
+  right:0.5rem;
+  top:0.5rem;
+  position: absolute;
+  color:red
+ } 
+.favorite.not{
+   color: aliceblue; 
+} 
+.description{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.price{
+  font-size: 1.1rem;
+  margin-top: 0.7rem;
+  color: black;
+  padding: 0.3rem 100% 0 0;
+  left: 0.9rem;
+  
+}
+  @media screen and (max-width :600px) {
+    .course{
+        background-color:#c2c7ce ;
+        padding:50px 100px;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    /* Styles for screens smaller than 600px */
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    /* Styles for screens between 601px and 1024px */
+}
+
+@media only screen and (min-width: 1025px) {
+    /* Styles for screens larger than 1024px */
+}

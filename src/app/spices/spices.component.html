@@ -1,0 +1,29 @@
+<app-searchs></app-searchs>
+<section class = "Spices">
+    <ul>
+       <li >
+           <div class="row">
+           <div class="col-lg-3" *ngFor = "let x of spices">
+               <div class="box" >
+                <div routerLink="/spices/{{x.id}}">
+                       <img src= "{{x.imageUrl}}" alt="x.name" width="80%">
+                       <div class="content">
+                           <div class="name">
+                               {{x.name}}
+                           </div>
+                           <span class="favorite {{x.favorite?'':'not'}}">♥</span>
+                           <div class="description">
+                               {{x.description}}  
+                           </div>
+                           <div class="price">
+                               {{x.price|currency:"INR":"symbol"}}
+                           </div>
+                       </div>
+                   </div>
+               </div>  
+           </div>
+           </div>
+       </li>
+   </ul> 
+   <router-outlet></router-outlet>
+   </section>

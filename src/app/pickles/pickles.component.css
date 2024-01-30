@@ -1,0 +1,154 @@
+.text{
+    text-align: center;
+    color: rgb(242, 237, 230);
+    background-color: rgb(170, 125, 49);
+    font-size: xx-large;
+}
+.Pickles{
+    background-color:rgb(127, 112, 86);
+    padding: 50px 50px;
+}
+.box{
+    background-color: rgb(170, 125, 49);
+    padding: 10px 20px;
+    border-radius: 1rem;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.box img{
+    height:200px;
+    width:275px;
+}
+.box :hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+ul{
+    columns: 3;
+    list-style-type: none;
+    padding-top: 10px;
+
+  } 
+/* #ul img{
+    height: 100%;
+    width:fit-content;
+} */
+
+/* btn-primary{
+    color: aqua;
+
+    background-color: aqua;
+  } */
+   button{
+    padding-left: 10px;
+    text-align: center;
+    position: 10px;
+  }
+  .content{
+    padding: .5rem 1rem;
+    position: relative;
+  }
+.favorite{
+   font-size: 1.2rem;
+  right:0.5rem;
+  top:0.5rem;
+  position: absolute;
+  color:red
+ } 
+.favorite.not{
+   color:white; 
+} 
+.description{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.price{
+  font-size: 1.1rem;
+  margin-top: 0.7rem;
+  color: black;
+  padding: 0.3rem 100% 0 0;
+  left: 0.9rem;
+  
+}
+  /* @media screen and (max-width :600px) {
+    .Pickles{
+        background-color:#c2c7ce ;
+        padding:50px 100px;
+    }
+  } */
+  /*  
+.box{
+    background-color: rgb(170, 125, 49);
+    padding: 10px 20px;
+    border-radius: 1rem;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.box img{
+    height:200px;
+    width:275px;
+}
+.box :hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+ul{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  list-style-type: none;
+  flex-wrap: wrap;
+  columns: 3;
+}  
+#ul img{
+  height: 100%;
+  width:fit-content;
+}
+li a{
+  height: 22.5rem;
+  display: flex;
+  margin: 0.5rem;
+  flex-direction: column;
+  width:20rem;
+  border: 1px solid whitesmoke ;
+  overflow: hidden;
+  color:rgb(242, 237, 230);
+}
+li a:hover{
+  opacity: 0.9;
+  cursor:pointer;
+}
+li a img{
+  object-fit: cover;
+  height: 14.5rem;
+}
+.content{
+  height:7rem;
+  position: relative;
+  padding :0.5rem;
+  margin-top: 0.3rem;
+}
+.favorite{
+  font-size: 1.2rem;
+  right:0.5rem;
+  top:0.5rem;
+  position: absolute;
+}
+.favorite.not{
+  color:gray;
+}
+.description{
+  flex:9;
+}
+@media screen and (max-width :600px) {
+  .course{
+      background-color:#c2c7ce ;
+      padding:50px 100px;
+  }
+}   */

@@ -1,0 +1,5 @@
+<div>
+    <input #p type="text" placeholder="Search for items" (keyup.enter)="search(p.value)" [value]="searchPowder">
+    <button (click)="search(p.value)">Search</button>
+</div>
+

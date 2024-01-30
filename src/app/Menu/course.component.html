@@ -1,0 +1,42 @@
+<section class = "course">
+    <div class="container">
+        <h1 class="text">Menu</h1>
+    </div>
+    <ul>
+        <!-- <img src="/assets/img/bananaleaf.jpg"> -->
+
+     <li>
+        <!-- <img src="/assets/img/bananaleaf.jpg"> -->
+        <div class="row">
+            <div class="col-lg-3" *ngFor = "let cs of course">
+                <div class="box" >
+                    <img src= "{{ cs.image }}" width = "80%">
+                    <h4 class = "mt-2" >{{cs.name}}</h4>
+                    <p class="mt-2">{{cs.description}}</p>
+                <div>
+                <div *ngIf="cs.id===1">
+                    <button routerLink="/pickle">Explore Pickles</button>
+                    
+                </div>
+                <div *ngIf="cs.id===2">
+                    <button  routerLink="/powders">Explore Powders</button>
+                
+                </div>
+                <div *ngIf="cs.id===3">
+                    <button routerLink="/dals">Explore Dals</button>
+                   
+                </div>
+                <div *ngIf="cs.id===4">
+                    <button routerLink="/spices">Explore Spices</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+  </li>
+</ul> 
+
+<router-outlet></router-outlet>
+
+</section>

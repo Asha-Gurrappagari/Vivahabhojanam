@@ -1,0 +1,5 @@
+<div>
+    <input #SP type="text" placeholder="Search for items" (keyup.enter)="search(SP.value)" [value]="searchSpice">
+    <button (click)="search(SP.value)">Search</button>
+</div>
+

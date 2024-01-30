@@ -1,0 +1,40 @@
+<section class="food">
+<app-not-found [visible]="!food" notfoundmessage="Product Not Found!"
+resetLinkText="Back To Homepage"></app-not-found>
+<div *ngIf="food" class="container">
+    <img [src]="food.imageUrl" [alt]="food.name">
+<div class="details">
+    <div class="header">
+        <span class="name">
+            {{food.name}}
+        </span>
+        <span class="favorite {{food.favorite?'':'not'}}">♥</span>
+    </div>
+    <!-- <div class="star">
+        <star-rating [value]="food.star"
+        [totalstars]="5"
+        checkedcolor="red"
+        uncheckedcolor="black"
+        size="24px"
+        readonly="true">
+    </star-rating>
+    </div> -->
+    <div class="description">
+        <span>
+            {{food.description}}
+        </span>
+    </div>
+    <div class="price">
+            <span>
+                {{food.price|currency:"INR":"symbol"}}
+            </span>
+    </div>
+    <button (click)="addToCart()">Add to Cart</button>
+
+    <div class="tag">
+        <app-tag [foodPagetags]="food.tags" justifyContent="start"></app-tag>
+    </div>
+</div>
+</div>
+</section> 
+

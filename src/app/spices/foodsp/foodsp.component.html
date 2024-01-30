@@ -1,0 +1,34 @@
+<app-not-found [visible]="!spices" notfoundmessage="Product Not Found!"
+resetLinkText="Back To Homepage"></app-not-found>
+
+<div *ngIf="spices" class="container">
+    <img [src]="spices.imageUrl" [alt]="spices.name">
+<div class="details">
+    <div class="header">
+        <span class="name">
+            {{spices.name}}
+        </span>
+        <span class="favorite {{spices.favorite?'':'not'}}">♥</span>
+    </div>
+    <!-- <div class="star">
+        <star-rating [value]="food.star"
+        [totalstars]="5"
+        checkedcolor="red"
+        uncheckedcolor="black"
+        size="24px"
+        readonly="true">
+    </star-rating>
+    </div> -->
+    <div class="description">
+        <span>
+            {{spices.description}}
+        </span>
+    </div>
+    <div class="price">
+            <span>
+                {{spices.price|currency:"INR":"symbol"}}
+            </span>
+    </div>
+    <button (click)="addToCartS()">Add to Cart</button>
+</div>
+</div>

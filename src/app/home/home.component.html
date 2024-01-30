@@ -1,0 +1,53 @@
+<!-- <form>
+    <input type="text" placeholder="Filter by city">
+    <button class="primary" type="button">Search</button>
+</form>
+
+  <section class="results">
+    <app-housing-location></app-housing-location>
+  </section>
+  <app-housing-location [housingLocation]="housingLocation"></app-housing-location> -->
+  <!-- <!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<div class="w3-container w3-teal" style="width: auto; height: 100px;">
+<img src="/assets/img/homelogo.jpg" alt="logo" style="width:4%">
+<h1 style="font-size: small;">Homes</h1>
+<a style="align-content: right;">Contact Us</a>
+</div>
+<div class="listing" >
+  <img class="listing-photo" src="assets/img/house1.jpg" alt="Apartment-India" >
+  <h2 class="listing-heading">{{name}}</h2>
+  <p class="listing-location">{{city}}</p>
+</div> -->
+
+<!-- <div class="w3-container w3-teal" >
+  <p>My footer information</p>
+</div> -->
+
+<!-- </body>
+</html>  -->
+<section class="home">
+  <img src="assets/img/vivaha.jpg" alt="homepage">
+  <div class="homecontent">
+    <h1>A pinch of passion in every dish..!<br></h1>
+    <!-- <h4>In making of authentic food</h4> -->
+    <!-- <h2>Welcome to Udemy...</h2> -->
+    <p>
+      <button (click)="getMenu()">Menu</button>
+      <button (click)="joinNow()">Login</button>
+      <button (click)="onRefresh()">Refresh</button>
+    </p>
+     
+    <!-- <a routerLink="course" click()="getCourse()" class="btn-btn-lg btn-light" >Discover Course</a> -->
+    <!-- <button onclick="getCourse($event)">Dic</button> -->
+    <!-- <select onclick="getCourse()"></select> -->
+    
+    <!-- <a routerLink="join" class="btn-btn-lg btn-primary">Join Now</a> -->
+    <router-outlet></router-outlet>
+  </div>
+</section>

@@ -1,0 +1,124 @@
+<app-not-found [visible]="!cart "
+notfoundmessage = "Cart Page Is Empty!"
+resetLinkText="Go To Homepage" ></app-not-found>
+<div *ngIf="cart && cart.items.length >0 || cart && cart.item1.length >0 || cart && cart.item2.length>0 || cart && cart.item3.length>0" class="container">
+<ul>
+    <li *ngFor="let cartItem of cart.items">
+        <div>
+            <img [src]="cartItem.food.imageUrl" [alt]="cartItem.food.name">
+        </div>
+        <div>
+            <a routerLink="/food/{{cartItem.food.id}}">
+                {{cartItem.food.name}}
+            </a>
+        </div>
+        <div>
+            <select #quantitySelect (change)="changeQuantity(cartItem,quantitySelect.value)">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+        <div>
+            {{cartItem.price|currency:'INR':'symbol'}}
+        </div>
+        <div>
+            <button class="remove-button" (click)="removeFromCart(cartItem)">
+                Remove
+            </button>
+        </div>
+    </li>
+        <li *ngFor="let cartItemp of cart.item1">
+            <div>
+                <img [src]="cartItemp.powder.imageUrl" [alt]="cartItemp.powder.name">
+            </div>
+            <div>
+                <a routerLink="/powder/{{cartItemp.powder.id}}">
+                    {{cartItemp.powder.name}}
+                </a>
+            </div>
+            <div>
+                <select #quantitySelectp (change)="changeQuantityp(cartItemp,quantitySelectp.value)">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div>
+                {{cartItemp.price|currency:'INR':'symbol'}}
+            </div>
+            <div>
+                <button class="remove-button" (click)="removeFromCartP(cartItemp)">
+                    Remove
+                </button>
+            </div>
+        </li>
+        <li *ngFor="let cartItemd of cart.item2">
+            <div>
+                <img [src]="cartItemd.dals.imageUrl" [alt]="cartItemd.dals.name">
+            </div>
+            <div>
+                <a routerLink="/dals/{{cartItemd.dals.id}}">
+                    {{cartItemd.dals.name}}
+                </a>
+            </div>
+            <div>
+                <select #quantitySelectd (change)="changeQuantityd(cartItemd,quantitySelectd.value)">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div>
+                {{cartItemd.price|currency:'INR':'symbol'}}
+            </div>
+            <div>
+                <button class="remove-button" (click)="removeFromCartd(cartItemd)">
+                    Remove
+                </button>
+            </div>
+        </li>
+        <li *ngFor="let cartItems of cart.item3">
+            <div>
+                <img [src]="cartItems.spices.imageUrl" [alt]="cartItems.spices.name">
+            </div>
+            <div>
+                <a routerLink="/spices/{{cartItems.spices.id}}">
+                    {{cartItems.spices.name}}
+                </a>
+            </div>
+            <div>
+                <select #quantitySelects (change)="changeQuantitys(cartItems,quantitySelects.value)">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div>
+                {{cartItems.price|currency:'INR':'symbol'}}
+            </div>
+            <div>
+                <button class="remove-button" (click)="removeFromCarts(cartItems)">
+                    Remove
+                </button>
+            </div>
+        </li>
+    </ul>
+    <div class="checkout">
+        <div>
+        <div class="foods-count">{{cart.totalQuantity}}</div>
+        <div class="total-price">{{cart.totalPrice|currency:'INR':'symbol'}}</div>
+    </div>
+    <a routerLink="/checkout">Proceed to Checkout</a>
+    </div>
+    </div>
+  
+    
